@@ -1,5 +1,103 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+/* Debug */
+.debug .container {
+  background-color: brown;
+  height: 700px;
+}
+
+.debug .selected {
+  background-color: cadetblue;
+  height: 100%;
+}
+
+.debug .carousel {
+  background-color: chocolate;
+  height: 100%;
+}
+
+.debug .buttons {
+  background-color: cornflowerblue;
+  height: 100%;
+}
+
+body {
+  background-color: bisque;
+}
+
+.container {
+  width: 80%;
+  height: 650px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  height: calc(100% / 5);
+}
+
+.selected {
+  width: 67%;
+}
+
+.carousel {
+  width: 27%;
+}
+
+.buttons {
+  width: 6%;
+  font-size: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  height: 127px;
+}
+
+.showimg {
+  width: 100%;
+}
+
+img {
+    object-fit: cover;
+    width: 99%;
+    height: 100%;
+}
+
+.upBtn, 
+.downBtn {
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.position {
+  position: relative;
+  height: 100%;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 3rem;
+  right: 1.5rem;
+  color: white;
+  text-align: end;
+}
+
+.obscure {
+  filter: brightness(0.2);
+}
+
+.border {
+  border: 3px solid blue;
 }
