@@ -76,7 +76,8 @@ img {
 }
 
 .upBtn, 
-.downBtn {
+.downBtn,
+.loop {
   cursor: pointer;
   margin: 1rem 0;
 }

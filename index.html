@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="carousel">
-        <div v-if="counter != n" v-for="(image, n) in images" class="card">
+        <div v-for="(image, n) in images" class="card" v-if="counter != n" >
           <img class="obscure" :src="image.imgSrc" alt="">
         </div>
         <div v-else class="card">
@@ -36,6 +36,9 @@
         </div>
         <div class="">
           <i @click="downClick" class="downBtn fas fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="">
+          <i @click="loop" class="loop fas fa-undo-alt"></i>
         </div>
       </div>
     </div>

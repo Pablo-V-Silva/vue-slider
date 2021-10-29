@@ -48,7 +48,11 @@ const app = new Vue({
       if (this.counter < 0) {
         this.counter = this.images.length - 1;
       }
-    }
+    },
+
+    loop() {
+      setInterval(this.downClick, 1 * 1000)
+    },
 
   }
 })
