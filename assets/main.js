@@ -31,7 +31,9 @@ const app = new Vue({
 
     counter: 0,
 
-    classOfImg: 'obscure'
+    classOfImg: 'obscure',
+
+    interval: false
   },
   methods: {
     downClick() {
@@ -41,6 +43,7 @@ const app = new Vue({
       if (this.counter > this.images.length - 1) {
         this.counter = 0;
       }
+      clearInterval(this.loop)
     },
     upClick() {
       --this.counter;
@@ -48,11 +51,18 @@ const app = new Vue({
       if (this.counter < 0) {
         this.counter = this.images.length - 1;
       }
+      clearInterval(this.loop)
     },
 
     loop() {
-      setInterval(this.downClick, 1 * 1000)
-    },
+      this.inteval
 
+      if (this.interval == false) {
+        this.interval = setInterval(this.downClick, 1 * 1000)
+      } else {
+        clearInterval(this.interval);
+        this.interval = false
+      }
+    }
   }
 })
