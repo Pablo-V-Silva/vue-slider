@@ -31,6 +31,21 @@ const app = new Vue({
     counter: 0,
   },
   methods: {
+    upClick() {
+      // console.log('clicked');
+      ++this.counter;
 
+      if (this.counter > this.images.length - 1) {
+        this.counter = 0;
+      }
+    },
+
+    downClick() {
+      --this.counter;
+
+      if (this.counter < 0) {
+        this.counter = this.images.length - 1;
+      }
+    }
   }
 })
