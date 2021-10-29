@@ -95,9 +95,9 @@ img {
 }
 
 .obscure {
-  filter: brightness(0.2);
+  filter: brightness(0.3);
 }
 
 .border {
-  border: 3px solid blue;
+  border: 3px solid orangered;
 }

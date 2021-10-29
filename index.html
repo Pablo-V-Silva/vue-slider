@@ -23,8 +23,11 @@
         </div>
       </div>
       <div class="carousel">
-        <div v-for="image in images" class="card">
-          <img :class="classOfImg" :src="image.imgSrc" alt="">
+        <div v-if="counter != n" v-for="(image, n) in images" class="card">
+          <img class="obscure" :src="image.imgSrc" alt="">
+        </div>
+        <div v-else class="card">
+          <img class="border" :src="image.imgSrc" alt="">
         </div>
       </div>
       <div class="buttons">
