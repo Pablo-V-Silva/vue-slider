@@ -28,10 +28,13 @@ const app = new Vue({
         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
       },
     ],
+
     counter: 0,
+
+    classOfImg: 'obscure'
   },
   methods: {
-    upClick() {
+    downClick() {
       // console.log('clicked');
       ++this.counter;
 
@@ -39,13 +42,13 @@ const app = new Vue({
         this.counter = 0;
       }
     },
-
-    downClick() {
+    upClick() {
       --this.counter;
 
       if (this.counter < 0) {
         this.counter = this.images.length - 1;
       }
     }
+
   }
 })

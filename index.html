@@ -24,7 +24,7 @@
       </div>
       <div class="carousel">
         <div v-for="image in images" class="card">
-          <img :src="image.imgSrc" alt="">
+          <img :class="classOfImg" :src="image.imgSrc" alt="">
         </div>
       </div>
       <div class="buttons">
